@@ -1,0 +1,145 @@
+.vendors {
+    .list-reset;
+}
+
+.vendor {
+    background-color: #fff;
+
+    h2 {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    + .vendor {
+        border-top: 1px solid darken(#fff, 7.5%);
+    }
+
+    &.is-open {
+        box-shadow: 0 3px 20px fade(#000, 15%);
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        + .vendor {
+            margin-top: 30px;
+        }
+    }
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.auto-indicator {
+    margin-left: 5px;
+    fill: @pink;
+}
+
+.edit-action {
+    display: flex;
+    padding: 10px;
+    margin: -10px -10px -10px auto;
+    fill: lighten(#000, 10%);
+    opacity: 0;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+
+    &:focus {
+        background-color: darken(#fff, 10%);
+    }
+}
+
+.vendor:hover .edit-action:not(:hover):not(:focus) {
+    opacity: 0.6;
+}
+
+.categories {
+    display: flex;
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 7px -3px -3px;
+}
+
+.transactions {
+    .list-reset;
+    display: none;
+    flex: 0 0 100%;
+    padding: 20px;
+    border-top: 1px solid darken(#fff, 7.5%);
+
+    .is-open & {
+        display: block;
+    }
+
+    &.is-empty {
+        color: @textMutedColour;
+    }
+}
+
+.transaction-day {
+    + .transaction-day {
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 14px;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.transaction-day-transactions {
+    .list-reset;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    border-top: 1px solid darken(#fff, 7.5%);
+
+    &:first-child {
+        margin-top: 5px;
+        border-top: 2px solid darken(#fff, 7.5%);
+    }
+}
+
+.transaction-name {
+    flex: 1 1 auto;
+    color: @textSecondaryColour;
+}
+
+.transaction-amount {
+    flex: 0 1 auto;
+    font-weight: 500;
+
+    &.is-positive {
+        color: @green;
+    }
+
+    &.is-negative {
+        color: @red;
+    }
+}
+
+.transaction-categories {
+    display: flex;
+    margin: -3px -3px -3px 7px;
+}
+
+.empty {
+    text-align: center;
+}

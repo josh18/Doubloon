@@ -1,0 +1,89 @@
+.categorise {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.amount {
+    font-size: 25px;
+    font-weight: 500;
+
+    &.is-positive {
+        color: @green;
+    }
+
+    &.is-negative {
+        color: @red;
+    }
+}
+
+.info-controls {
+    display: flex;
+}
+
+.info {
+    flex: 1 1 50%;
+}
+
+.vendor-date {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.date {
+    margin-top: 3px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.description,
+.reference {
+    color: @textSecondaryColour;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+}
+
+.progress-indicator {
+    display: flex;
+    height: 20px;
+    background-color: @darkGrey;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: @pink;
+}
+
+.progress-count {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    margin: auto -5px -5px;
+}
+
+.action-skip,
+.action-save {
+    margin: 5px;
+    flex: 1 1 50%;
+}
+
+.action-skip {
+    .button-secondary;
+}
+
+.action-save {
+    .button;
+}
+
+.quick-select {
+    margin-top: 30px;
+}

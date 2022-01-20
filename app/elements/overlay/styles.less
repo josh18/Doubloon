@@ -1,0 +1,36 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    .zIndexOverlay;
+    .transitionQuick(opacity);
+}
+
+.overlay-content {
+    position: relative;
+    flex: 0 1 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.overlay-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.transition-show,
+.transition-hide {
+    opacity: 0;
+}

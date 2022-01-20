@@ -1,0 +1,32 @@
+@pink: #ff335f;
+@pinkActive: #eb2f58;
+
+@purple: #ad2361;
+
+@darkPurple: #2d3345;
+
+@grey: #f1f5f9;
+
+@darkGrey: #dae4ed;
+@darkGreyActive: #c7d0d9;
+
+@green: #19a64f;
+@red: #e52e2e;
+
+@textColour: lighten(#000, 25%);
+@textSecondaryColour: lighten(#000, 35%);
+@textMutedColour: lighten(#000, 50%);
+
+.transitionQuick(@property) {
+    transition-duration: 0.2s;
+    transition-property: @property;
+    transition-timing-function: ease;
+}
+
+.zIndexFloat() {
+    z-index: 10;
+}
+
+.zIndexOverlay() {
+    z-index: 100;
+}

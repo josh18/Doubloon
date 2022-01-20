@@ -1,0 +1,133 @@
+.categories {
+    .list-reset;
+}
+
+.category {
+    background-color: #fff;
+
+    h2 {
+        margin-left: 20px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    + .category {
+        border-top: 1px solid darken(#fff, 7.5%);
+    }
+
+    &.is-open {
+        box-shadow: 0 3px 20px fade(#000, 15%);
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        + .category {
+            margin-top: 30px;
+        }
+    }
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.colour {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.edit-action {
+    display: flex;
+    padding: 10px;
+    margin: -10px -10px -10px auto;
+    fill: lighten(#000, 10%);
+    opacity: 0;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+
+    &:focus {
+        background-color: darken(#fff, 10%);
+    }
+}
+
+.category:hover .edit-action:not(:hover):not(:focus) {
+    opacity: 0.6;
+}
+
+.transactions {
+    .list-reset;
+    display: none;
+    padding: 20px;
+    border-top: 1px solid darken(#fff, 7.5%);
+
+    .is-open & {
+        display: block;
+    }
+
+    &.is-empty {
+        color: @textMutedColour;
+    }
+}
+
+.transaction-day {
+    + .transaction-day {
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 14px;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.transaction-day-transactions {
+    .list-reset;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    border-top: 1px solid darken(#fff, 7.5%);
+
+    &:first-child {
+        margin-top: 5px;
+        border-top: 2px solid darken(#fff, 7.5%);
+    }
+}
+
+.transaction-name {
+    flex: 1 1 auto;
+    color: @textSecondaryColour;
+}
+
+.transaction-amount {
+    flex: 0 1 auto;
+    font-weight: 500;
+
+    &.is-positive {
+        color: @green;
+    }
+
+    &.is-negative {
+        color: @red;
+    }
+}
+
+.empty {
+    text-align: center;
+}

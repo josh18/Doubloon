@@ -1,0 +1,102 @@
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: @textColour;
+    background-color: @grey;
+}
+
+// Text
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 500;
+}
+
+// Controls
+
+a {
+    color: @red;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+button {
+    .button-reset;
+    cursor: pointer;
+}
+
+// Input
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+    padding: 9px;
+    line-height: 1;
+    background-color: #fff;
+    border: 1px solid darken(#fff, 20%);
+    border-radius: 2px;
+
+    &:focus {
+        outline: 0;
+        border-color: @pink;
+        box-shadow: 0 0 4px 1px fade(@pink, 30%);
+    }
+
+    &::first-line {
+    	vertical-align: middle;
+    }
+
+    &::input-placeholder::first-line {
+    	vertical-align: middle;
+    }
+}
+
+select {
+    height: 38px;
+}
+
+label {
+    display: inline-block;
+}
+
+:global {
+    .form-field {
+        + .form-field {
+            margin-top: 20px;
+        }
+
+        label + input {
+            margin-top: 5px;
+        }
+    }
+
+    .checkbox {
+        display: flex;
+
+        label {
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            margin-right: 5px;
+        }
+
+        + .checkbox {
+            margin-top: 5px;
+        }
+    }
+}

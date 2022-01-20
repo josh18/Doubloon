@@ -1,0 +1,23 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+ - url: /favicon.ico
+   static_files: favicon.ico
+   upload: favicon.ico
+
+ - url: /apple-touch-icon.png
+   static_files: apple-touch-icon.png
+   upload: apple-touch-icon.png
+
+ - url: /placeholder.json
+   static_files: placeholder.json
+   upload: placeholder.json
+
+ - url: /assets
+   static_dir: assets
+
+ - url: /(.*)
+   static_files: index.html
+   upload: index.html

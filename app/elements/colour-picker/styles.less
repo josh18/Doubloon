@@ -1,0 +1,37 @@
+.colour-picker {
+    position: relative;
+}
+
+.colour-picker-input.colour-picker-input.colour-picker-input {
+    padding-left: 37px;
+    margin-top: 5px;
+}
+
+.dropdown-toggle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.dropdown {
+    .dropdown-template;
+    display: none;
+    flex-wrap: wrap;
+    width: calc(30px * 5 + 4px * 6 + 2px);
+    padding: 2px;
+
+    &.is-open {
+        display: flex;
+    }
+}
+
+.dropdown-colour {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
